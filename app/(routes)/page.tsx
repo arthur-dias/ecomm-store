@@ -14,9 +14,9 @@ const HomePage = async () => {
     <Container>
       <div className='space-y-10 pb-10'>
         <Banner data={banner} />
-      </div>
-      <div className='flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8'>
-        <ProductList title='Destaque' items={products} />
+        <div className='flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8'>
+          <ProductList title='Destaque' items={products} />
+        </div>
       </div>
     </Container>
   )
