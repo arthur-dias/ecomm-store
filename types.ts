@@ -1,6 +1,6 @@
 export interface Banner {
   id: string
-  name: string
+  label: string
   imageUrl: string
 }
 
