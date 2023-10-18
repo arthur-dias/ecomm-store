@@ -7,6 +7,7 @@ import getSizes from '@/actions/getSizes'
 import Banner from '@/components/Banner'
 import Container from '@/components/ui/container'
 import Filter from '@/components/ui/filter'
+import MobileFilter from '@/components/ui/mobileFilter'
 import NoResults from '@/components/ui/noResults'
 import ProductCard from '@/components/ui/productCard'
 
@@ -40,6 +41,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
         <Banner data={category.banner} />
         <div className='px-4 sm:px-6 lg:px-8 pb-24'>
           <div className='lg:grid lg:grid-cols-5 lg:gap-x-8'>
+            <MobileFilter sizes={sizes} colors={colors} />
             <div className='hidden lg:block'>
               <Filter valueKey='sizeId' name='Tamanhos' data={sizes} />
               <Filter valueKey='colorId' name='Cores' data={colors} />
