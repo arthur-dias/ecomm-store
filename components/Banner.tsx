@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Banner as BannerType } from '@/types'
 
 interface BannerProps {
@@ -5,6 +6,16 @@ interface BannerProps {
 }
 
 const Banner: React.FC<BannerProps> = ({ data }) => {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return null
+  }
+
   return (
     <div className='p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden'>
       <div
